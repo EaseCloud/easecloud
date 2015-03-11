@@ -49,6 +49,12 @@ input {
 .pull-right {
   float: right;
 }
+.font-normal {
+  font-family: '宋体', 'SimSun', Arial, sans-serif;
+}
+.font-black {
+  font-family: 'Helvetica Neue', 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', '华文细黑', STHeiti, '微软雅黑', 'Microsoft YaHei', SimHei, sans-serif;
+}
 .clearfix {
   clear: both;
   zoom: 1;
@@ -76,6 +82,80 @@ input {
   border-radius: 9999px;
   -webkit-border-radius: 9999px;
   -moz-border-radius: 9999px;
+}
+body {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', '华文细黑', STHeiti, '微软雅黑', 'Microsoft YaHei', SimHei, sans-serif;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+/** Components **/
+#masthead {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100px;
+}
+#masthead .home {
+  display: block;
+  float: left;
+  margin-top: 20px;
+}
+#masthead .home img {
+  display: block;
+}
+#masthead #menu-main {
+  float: right;
+  line-height: 38px;
+  margin-top: 60px;
+  font-size: 16px;
+}
+#masthead #menu-main .menu-item {
+  display: inline-block;
+  padding: 0 8px;
+  margin: 0 7px;
+}
+#masthead #menu-main .menu-item.current-menu-item {
+  border-bottom: 2px solid #ea5b23;
+}
+#colophon {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: '宋体', 'SimSun', Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 30px auto 15px auto;
+  padding-top: 8px;
+  border-top: 1px solid #dadada;
+}
+#colophon .footer-logo-miit {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+#colophon p {
+  line-height: 1.8em;
+}
+#colophon a {
+  color: #006bc8;
+}
+#colophon a:hover {
+  color: #003562;
+}
+#colophon a:visited {
+  color: #005095;
+}
+#colophon #menu-footer .menu-item {
+  display: inline-block;
+  line-height: 1.8em;
+}
+#colophon #menu-footer .menu-item::after {
+  content: " | ";
+}
+#colophon #menu-footer .menu-item:last-of-type::after {
+  content: "";
 }
 .wp-caption {
   position: relative;

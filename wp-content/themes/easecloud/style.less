@@ -17,9 +17,64 @@ Text Domain: easecloud
 
 @import "css/template";
 
+// variables
+@body-width: 1000px;
+@color-major: #005095;
+@color-minor: #EA5B23;
+@color-border: #DADADA;
+
+@color-link: lighten(@color-major, 10%);
+@color-link-hover: darken(@color-major, 10%);
+@color-link-visited: @color-major;
+
 html {}
 
-body {}
+body {
+  font-size: 14px;
+  .font-black();
+}
+
+.wrapper { width: @body-width; margin: 0 auto; }
+
+/** Components **/
+
+#masthead {
+  .wrapper();
+  height: 100px;
+  .home {
+    display: block; float: left; margin-top: 20px;
+    img { display: block; }
+  }
+  #menu-main {
+    float: right; line-height: 38px; margin-top: 60px; font-size: 16px;
+    .menu-item {
+      display: inline-block; padding: 0 8px; margin: 0 7px;
+      &.current-menu-item { border-bottom: 2px solid @color-minor; }
+    }
+  }
+}
+
+#colophon {
+  .wrapper(); .font-normal();
+  font-size: 12px; text-align: center; margin: 30px auto 15px auto;
+  padding-top: 8px; border-top: 1px solid @color-border;
+  .footer-logo-miit { width: 1em; height: 1em; display: inline-block; vertical-align: middle; }
+  p { line-height: 1.8em; }
+  a {
+    color: @color-link;
+    &:hover { color: @color-link-hover; }
+    &:visited { color: @color-link-visited; }
+  }
+
+  #menu-footer {
+    .menu-item {
+      display: inline-block; line-height: 1.8em;
+      &::after { content: " | " }
+      &:last-of-type::after { content: ""; }
+    }
+  }
+}
+
 
 // WordPress Support classes
 // TODO: Not Implemented Style Classes

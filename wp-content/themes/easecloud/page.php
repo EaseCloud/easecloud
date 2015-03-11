@@ -10,3 +10,8 @@
  * @subpackage EaseCloud
  * @since EaseCloud 1.0
  */
+
+get_header(); ?>
+
+
+<?php get_footer(); ?>

@@ -42,6 +42,7 @@ if ( ! function_exists( 'template_setup' ) ) {
         register_nav_menus( array(
             'primary'   => __( '主菜单栏', 'easecloud' ),
             'secondary' => __( '侧边菜单栏', 'easecloud' ),
+            'footer' => __( '底部菜单栏', 'easecloud' ),
         ) );
 
         /*
