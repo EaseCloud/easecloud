@@ -134,6 +134,7 @@ body.page-about .ban .ban-title h1 {
   text-align: center;
   padding-top: 180px;
   height: 170px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 body.page-about .about-us {
   clear: both;
@@ -242,4 +243,5 @@ body.page-about .about-us .company-address-info .map {
 body.page-about .about-us .company-address-info .map iframe {
   width: 560px;
   height: 430px;
+  border: none;
 }
