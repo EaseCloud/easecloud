@@ -101,3 +101,145 @@ input {
 .aligncenter {
   text-align: center;
 }
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  clear: both;
+  zoom: 1;
+}
+.wrapper::before {
+  content: "";
+  display: table;
+}
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body.page-about {
+  min-width: 1000px;
+  position: relative;
+}
+body.page-about .ban {
+  margin: 0 auto;
+  position: relative;
+  background: url(images/about-ban-photo.png) 50% 50% no-repeat #f5e6d1;
+}
+body.page-about .ban .ban-title {
+  position: relative;
+}
+body.page-about .ban .ban-title h1 {
+  font-size: 62px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 180px;
+  height: 170px;
+}
+body.page-about .about-us {
+  clear: both;
+  zoom: 1;
+  margin-top: 30px;
+}
+body.page-about .about-us::before {
+  content: "";
+  display: table;
+}
+body.page-about .about-us::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body.page-about .about-us .company-info {
+  width: 440px;
+  float: left;
+}
+body.page-about .about-us .company-info .info-title {
+  clear: both;
+  zoom: 1;
+  width: 140px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #969696;
+}
+body.page-about .about-us .company-info .info-title::before {
+  content: "";
+  display: table;
+}
+body.page-about .about-us .company-info .info-title::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body.page-about .about-us .company-info .info-title img {
+  float: left;
+}
+body.page-about .about-us .company-info .info-title h1 {
+  font-size: 24px;
+}
+body.page-about .about-us .company-info .info {
+  width: 375px;
+  margin-top: 10px;
+}
+body.page-about .about-us .company-info .info p {
+  font-size: 15px;
+  line-height: 30px;
+}
+body.page-about .about-us .company-info .info p span {
+  color: #EE701A;
+}
+body.page-about .about-us .company-info .contact-address {
+  margin-top: 40px;
+}
+body.page-about .about-us .company-info .contact-address li {
+  clear: both;
+  zoom: 1;
+  margin-bottom: 18px;
+}
+body.page-about .about-us .company-info .contact-address li::before {
+  content: "";
+  display: table;
+}
+body.page-about .about-us .company-info .contact-address li::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body.page-about .about-us .company-info .contact-address li img {
+  float: left;
+}
+body.page-about .about-us .company-info .contact-address li p {
+  font-size: 26px;
+  line-height: 48px;
+  padding-left: 110px;
+}
+body.page-about .about-us .company-address-info {
+  width: 560px;
+  float: right;
+}
+body.page-about .about-us .company-address-info .address {
+  clear: both;
+  zoom: 1;
+}
+body.page-about .about-us .company-address-info .address::before {
+  content: "";
+  display: table;
+}
+body.page-about .about-us .company-address-info .address::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body.page-about .about-us .company-address-info .address img {
+  float: left;
+}
+body.page-about .about-us .company-address-info .address p {
+  font-size: 14px;
+  padding-top: 15px;
+  padding-left: 40px;
+}
+body.page-about .about-us .company-address-info .map {
+  margin-top: 30px;
+}
+body.page-about .about-us .company-address-info .map iframe {
+  width: 560px;
+  height: 430px;
+}
