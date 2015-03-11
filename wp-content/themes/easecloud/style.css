@@ -7,7 +7,7 @@ Description: Foshan EaseCloud Computer Technology Co. Ltd. official website.
 Version: 1.0
 License: Private
 License URI: http://www.easecloud.cn/license/
-Tags:
+Tags: fixed-layout
 Text Domain: easecloud
 
 逸云科技官方网站
@@ -156,6 +156,57 @@ body {
 }
 #colophon #menu-footer .menu-item:last-of-type::after {
   content: "";
+}
+.page-development h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #dadada;
+  margin: 8px 0;
+  padding: 8px 0;
+}
+.page-development h2 .dashicons {
+  color: #005095;
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-development .banner {
+  background: url('images/page-development-banner.png') 50% 50% no-repeat;
+  height: 360px;
+  background-size: cover;
+}
+.page-development #technology-stack {
+  width: 100%;
+  overflow-x: hidden;
+}
+.page-development #technology-stack ul.tech-items {
+  margin: 15px -25px 0 0;
+}
+.page-development #technology-stack ul.tech-items li {
+  float: left;
+  width: 188px;
+  margin: 0 15px 15px 0;
+  position: relative;
+  overflow: hidden;
+}
+.page-development #technology-stack ul.tech-items li a {
+  background: #0C4B33;
+  display: block;
+  height: 135px;
+}
+.page-development #technology-stack ul.tech-items li a .tech-summary {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  overflow-y: auto;
+  padding: 8px;
+  transition-duration: 0.5s;
+}
+.page-development #technology-stack ul.tech-items li a:hover .tech-summary {
+  opacity: 1;
 }
 .wp-caption {
   position: relative;

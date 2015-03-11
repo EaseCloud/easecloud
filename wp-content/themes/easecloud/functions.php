@@ -32,6 +32,8 @@ if ( ! function_exists( 'template_setup' ) ) {
 
     function template_setup() {
 
+        if ( ! isset( $content_width ) ) $content_width = 1000;
+
         // Enable support for Post Thumbnails, and declare two sizes.
         add_theme_support( 'post-thumbnails' );
         //set_post_thumbnail_size( 672, 372, true );
@@ -167,14 +169,14 @@ function post_list_by_category($cat, $count=10, $with_date=false, $random=false)
         'category' => $cat,
     );
     if($random == true) $args['orderby'] = 'rand';
-    ?><ul class="post-list<?=$with_date?' with-date':''?>"><?php
+    ?><ul class="post-list<?php echo $with_date?' with-date':''?>"><?php
     foreach(get_posts($args) as $post) {
         if(!$count--) break; // 条数限制
         ?><li>
         <?php if($with_date) {?>
-            <span class="list-item-date">[<?=date('m-d', strtotime($post->post_date))?>]</span>
+            <span class="list-item-date">[<?php echo date('m-d', strtotime($post->post_date))?>]</span>
         <?php }?>
-        <a href="<?=get_permalink($post); ?>"><?=$post->post_title?></a>
+        <a href="<?php echo get_permalink($post); ?>"><?php echo $post->post_title?></a>
         </li><?php
     }
     ?></ul><?php
@@ -186,7 +188,7 @@ function post_list_by_category($cat, $count=10, $with_date=false, $random=false)
  * @param mixed $cat
  */
 function more_tag_by_category($cat) {
-    ?><a class="more" href="<?=home_url()?>/category/<?=$cat?>">更多 &raquo;</a><?php
+    ?><a class="more" href="<?php echo home_url()?>/category/<?php echo $cat?>">更多 &raquo;</a><?php
 }
 
 
