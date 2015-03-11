@@ -121,3 +121,71 @@ body {
 .alignright { text-align: right; }
 .alignleft { text-align: left; }
 .aligncenter { text-align: center; }
+
+.wrapper { width: 1000px; margin: 0 auto; .clearfix(); }
+
+body.page-about{
+
+  min-width: 1000px; position: relative;
+
+  .ban{
+    margin: 0 auto;position: relative;
+    background: url(images/about-ban-photo.png) 50% 50% no-repeat #F5E6D1;
+    .ban-title{
+      position: relative;
+      h1{
+        font-size: 62px; color: #FFFFFF; text-align: center;padding-top: 180px;
+        height: 170px; text-shadow: 0 0 5px rgba(0,0,0,0.5);
+      }
+    }
+
+  }
+
+  .about-us{
+    .clearfix(); margin-top: 30px;
+    .company-info{
+      width:440px; float: left;
+
+      .info-title{
+        .clearfix();
+        width: 140px; padding-bottom: 10px; border-bottom: 1px solid #969696;
+        img{float: left;}
+        h1{font-size: 24px;}
+      }
+
+      .info{
+        width:375px; margin-top: 10px;
+        p{
+          span{color: #EE701A;}
+          font-size: 15px; line-height: 30px;
+        }
+      }
+
+      .contact-address{
+        margin-top: 40px;
+        li{
+          .clearfix(); margin-bottom: 18px;
+          img{ float: left; }
+          p{ font-size: 26px;line-height: 48px; padding-left: 110px;}
+        }
+      }
+
+    }
+
+    .company-address-info{
+      width: 560px; float: right;
+      .address{
+        .clearfix();
+        img{float: left;}
+        p{font-size: 14px; padding-top: 15px; padding-left: 40px; }
+      }
+      .map{
+        margin-top: 30px;
+        iframe{
+          width: 560px; height:430px; border: none;
+        }
+      }
+    }
+
+  }
+}
