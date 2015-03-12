@@ -105,7 +105,13 @@ function template_scripts() {
     wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/cssreset-min.css', array() );
 
     // Load our main stylesheet.
-    wp_enqueue_style( 'template-style', get_stylesheet_uri(), array(), '' );
+    wp_enqueue_style( 'template-style', get_stylesheet_uri(), array('reset'), '' );
+
+    // Load dashicons
+    wp_enqueue_style( 'dashicons-css', '/wp-includes/css/dashicons.min.css', array('template-style'), '4.1.1' );
+
+    // Load font-awesome
+    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css', array('reset'), '4.0.3' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );

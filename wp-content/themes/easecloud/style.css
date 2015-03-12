@@ -84,6 +84,8 @@ input {
   -moz-border-radius: 9999px;
 }
 body {
+  min-width: 1000px;
+  position: relative;
   font-size: 14px;
   font-family: 'Helvetica Neue', 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', '华文细黑', STHeiti, '微软雅黑', 'Microsoft YaHei', SimHei, sans-serif;
 }
@@ -95,7 +97,18 @@ body {
 #masthead {
   width: 1000px;
   margin: 0 auto;
+  clear: both;
+  zoom: 1;
   height: 100px;
+}
+#masthead::before {
+  content: "";
+  display: table;
+}
+#masthead::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 #masthead .home {
   display: block;
@@ -120,14 +133,28 @@ body {
   border-bottom: 2px solid #ea5b23;
 }
 #colophon {
-  width: 1000px;
-  margin: 0 auto;
-  font-family: '宋体', 'SimSun', Arial, sans-serif;
+  margin: 30px 0 0 0;
+  background: #F5F5F5;
+  border-top: 1px solid #E0E0E0;
+}
+#colophon .site-info {
   font-size: 12px;
   text-align: center;
-  margin: 30px auto 15px auto;
-  padding-top: 8px;
-  border-top: 1px solid #dadada;
+  padding: 15px 0;
+  font-family: '宋体', 'SimSun', Arial, sans-serif;
+  width: 1000px;
+  margin: 0 auto;
+  clear: both;
+  zoom: 1;
+}
+#colophon .site-info::before {
+  content: "";
+  display: table;
+}
+#colophon .site-info::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 #colophon .footer-logo-miit {
   width: 1em;
@@ -208,6 +235,164 @@ body {
 .page-development #technology-stack ul.tech-items li a:hover .tech-summary {
   opacity: 1;
 }
+body.page-about .banner {
+  margin: 0 auto;
+  position: relative;
+  height: 350px;
+  background: url(images/about-ban-photo.png) 50% 50% no-repeat #f5e6d1;
+}
+body.page-about .banner .banner-title {
+  position: relative;
+}
+body.page-about .banner .banner-title h1 {
+  font-size: 62px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 180px;
+  height: 170px;
+  text-shadow: 0 0 8px #835531;
+}
+body.page-about .about-us {
+  clear: both;
+  zoom: 1;
+  margin-top: 30px;
+}
+body.page-about .about-us::before {
+  content: "";
+  display: table;
+}
+body.page-about .about-us::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body.page-about .about-us h1 {
+  font-size: 20px;
+  line-height: 28px;
+  width: 50%;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 8px;
+  margin: 0 0 15px 0;
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+body.page-about .about-us h1 .dashicons {
+  font-size: 30px;
+  float: left;
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  color: #ea5b23;
+  margin-right: 8px;
+}
+body.page-about .about-us h1:hover .dashicons {
+  animation: rotation 0.8s;
+  -moz-animation: rotation 0.8s;
+  /* Firefox */
+  -webkit-animation: rotation 0.8s;
+  /* Safari 和 Chrome */
+  -o-animation: rotation 0.8s;
+}
+body.page-about .about-us h2 {
+  color: #ea5b23;
+  font-size: 18px;
+  margin: 15px 0;
+}
+body.page-about .about-us h3 {
+  color: #ea5b23;
+  font-size: 16px;
+  margin: 10px 0 6px 0;
+}
+body.page-about .about-us p {
+  font-size: 15px;
+  text-indent: 2em;
+  line-height: 24px;
+}
+body.page-about .about-us a {
+  font-weight: bold;
+  color: #006bc8;
+}
+body.page-about .about-us a:hover {
+  color: #003562;
+}
+body.page-about .about-us a:visited {
+  color: #005095;
+}
+body.page-about .about-us .info-summary {
+  width: 450px;
+  padding-left: 10px;
+  float: left;
+}
+body.page-about .about-us .info-summary .summary {
+  margin: 0 50px 0 0;
+}
+body.page-about .about-us .info-summary .contact {
+  margin: 30px 0;
+}
+body.page-about .about-us .info-summary .contact li {
+  font-family: '宋体', 'SimSun', Arial, sans-serif;
+  line-height: 24px;
+  margin: 8px 0;
+}
+body.page-about .about-us .info-summary .contact li .dashicons,
+body.page-about .about-us .info-summary .contact li .fa {
+  display: block;
+  float: left;
+  color: #ffffff;
+  background: #005095;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  line-height: 22px;
+  text-align: center;
+  margin-right: 8px;
+}
+body.page-about .about-us .info-summary .contact li .fa {
+  font-size: 13px;
+}
+body.page-about .about-us .info-summary .contact li .dashicons {
+  font-size: 14px;
+}
+body.page-about .about-us .info-address {
+  margin-left: 460px;
+  padding-right: 10px;
+}
+body.page-about .about-us .info-address .map {
+  margin-top: 30px;
+}
+body.page-about .about-us .info-address .map iframe {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 350px;
+  border: 1px solid #dadada;
+}
+body.page-about .about-us .info-pano {
+  padding: 25px;
+  margin: 30px 10px;
+  padding-top: 20px;
+  background: #F5F5F5;
+}
+body.page-about .about-us .info-pano h1 {
+  border-bottom: none;
+  width: auto;
+}
+body.page-about .about-us .info-pano iframe {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #dadada;
+  padding: 8px;
+  height: 480px;
+  background: white;
+}
 .wp-caption {
   position: relative;
 }
@@ -246,133 +431,4 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-body.page-about {
-  min-width: 1000px;
-  position: relative;
-}
-body.page-about .ban {
-  margin: 0 auto;
-  position: relative;
-  background: url(images/about-ban-photo.png) 50% 50% no-repeat #f5e6d1;
-}
-body.page-about .ban .ban-title {
-  position: relative;
-}
-body.page-about .ban .ban-title h1 {
-  font-size: 62px;
-  color: #FFFFFF;
-  text-align: center;
-  padding-top: 180px;
-  height: 170px;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-body.page-about .about-us {
-  clear: both;
-  zoom: 1;
-  margin-top: 30px;
-}
-body.page-about .about-us::before {
-  content: "";
-  display: table;
-}
-body.page-about .about-us::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body.page-about .about-us .company-info {
-  width: 440px;
-  float: left;
-}
-body.page-about .about-us .company-info .info-title {
-  clear: both;
-  zoom: 1;
-  width: 140px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #969696;
-}
-body.page-about .about-us .company-info .info-title::before {
-  content: "";
-  display: table;
-}
-body.page-about .about-us .company-info .info-title::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body.page-about .about-us .company-info .info-title img {
-  float: left;
-}
-body.page-about .about-us .company-info .info-title h1 {
-  font-size: 24px;
-}
-body.page-about .about-us .company-info .info {
-  width: 375px;
-  margin-top: 10px;
-}
-body.page-about .about-us .company-info .info p {
-  font-size: 15px;
-  line-height: 30px;
-}
-body.page-about .about-us .company-info .info p span {
-  color: #EE701A;
-}
-body.page-about .about-us .company-info .contact-address {
-  margin-top: 40px;
-}
-body.page-about .about-us .company-info .contact-address li {
-  clear: both;
-  zoom: 1;
-  margin-bottom: 18px;
-}
-body.page-about .about-us .company-info .contact-address li::before {
-  content: "";
-  display: table;
-}
-body.page-about .about-us .company-info .contact-address li::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body.page-about .about-us .company-info .contact-address li img {
-  float: left;
-}
-body.page-about .about-us .company-info .contact-address li p {
-  font-size: 26px;
-  line-height: 48px;
-  padding-left: 110px;
-}
-body.page-about .about-us .company-address-info {
-  width: 560px;
-  float: right;
-}
-body.page-about .about-us .company-address-info .address {
-  clear: both;
-  zoom: 1;
-}
-body.page-about .about-us .company-address-info .address::before {
-  content: "";
-  display: table;
-}
-body.page-about .about-us .company-address-info .address::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body.page-about .about-us .company-address-info .address img {
-  float: left;
-}
-body.page-about .about-us .company-address-info .address p {
-  font-size: 14px;
-  padding-top: 15px;
-  padding-left: 40px;
-}
-body.page-about .about-us .company-address-info .map {
-  margin-top: 30px;
-}
-body.page-about .about-us .company-address-info .map iframe {
-  width: 560px;
-  height: 430px;
-  border: none;
 }

@@ -8,61 +8,109 @@
 include "header.php";
 ?>
 
-<div id="page-about">
-    <div class="ban">
-        <div class="ban-title">
-            <h1><strong>将每一个细节力求做到完美</strong></h1>
-        </div>
-    </div>
-
-    <div class="about-us wrapper">
-
-        <div class="company-info">
-            <div class="info-title">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/arrowhead.png"/>
-                <h1>关于我们</h1>
-            </div>
-
-            <div class="info">
-                <p class="info-detail"><span>佛山市逸云科技信息有限公司</span><br>逸云科技致力于网站建设和协同办公软件开发,以专业
-                    的技术为各企业单位、个人打造快速网站建设开发平台。
-                    <br>操作简单快捷，模板生动多样，收费合理实惠，是您打造个性化网站的利器！逸云科技坚持做有用的网站,持续创新，追求实现客户的使用价值，为客户带来更好的体验、更有用的服务。</p>
-            </div>
-
-
-            <ul class="contact-address">
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about-phone.png"/>
-                    <p>12345678910</p>
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about-email.png"/>
-                    <p>easecloud@qq.com</p>
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about-qq.png"/>
-                    <p>123456789</p>
-                </li>
-            </ul>
-
-
-        </div>
-
-        <div class="company-address-info">
-
-            <div class="address">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/about-pin.png"/>
-                <p>佛山市顺德区乐从镇葛岸大道物联天下B座116</p>
-            </div>
-
-            <div class="map">
-                <iframe src="<?php echo get_template_directory_uri(); ?>/QQmap.html"></iframe>
-            </div>
-
-        </div>
-
+<div class="banner">
+    <div class="banner-title">
+        <h1><strong>将每一个细节做到完美</strong></h1>
     </div>
 </div>
-<?php
-    include "footer.php";
-?>
+
+<div class="wrapper">
+
+
+    <section class="about-us ">
+
+        <div class="info-summary">
+
+            <div class="summary">
+
+                <h1><span class="dashicons dashicons-universal-access"></span> 关于我们</h1>
+
+                <h2>佛山市逸云计算机科技有限公司</h2>
+
+                <p>
+                    逸云科技立足技术前沿，致力于计算机和互联网领域的开发创新，
+                    以专业的技术团队为广大企业及个人提供多层次的技术支持服务。
+                </p>
+
+                <h3>卓尔不凡·悠逸云端</h3>
+
+                <p>
+                    逸云科技坚持不懈创新，置身于最先进的技术潮流，携您进入互联网时代的云端，
+                    为您提供更轻松的工作环境和更优质的生活体验。
+                </p>
+
+            </div>
+
+            <div class="contact">
+
+                <h1><span class="dashicons dashicons-id"></span> 联系方式</h1>
+
+                <ul>
+                    <li>
+                        <span class="dashicons dashicons-businessman"></span>
+                        <a href="javascript:;">项目经理</a> &raquo;
+                        <a href="tel: 13798690402">13798690402</a>
+                    </li>
+                    <li>
+                        <span class="dashicons dashicons-admin-plugins"></span>
+                        <a href="javascript:;">技术支持</a> &raquo;
+                        <a href="tel: 15919002005">15919002005</a>
+                    </li>
+                    <li>
+                        <span class="dashicons dashicons-email-alt"></span>
+                        <a href="mailto:admin@easecloud.cn">admin@easecloud.cn</a>
+                    </li>
+                    <li>
+                        <span class="fa fa-qq"></span>
+                        <a href="tencent://message/?uin=2829614240&Site=qq&Menu=yes">easecloud@qq.com</a>
+                    </li>
+                    <li>
+                        <span class="dashicons dashicons-admin-home"></span>
+                        佛山市佛山新城乐从大道西12号物联天下产业园B座116
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-address">
+
+            <h1>
+                <span class="dashicons dashicons-location"></span>
+                地址导航
+            </h1>
+
+            <h3>物联天下</h3>
+
+            <p>
+                逸云科技位于佛山新城<a href="http://www.wiot.com.cn/" target="_blank">物联天下产业园</a>，
+                承载当地政府“商贸之都，物联新城”的发展规划，为发展新信息技术产业努力前进。
+            </p>
+
+            <p>
+                物联天下产业园区为逸云科技提供了良好的办公环境以及专业现代化的物业管理服务，
+                这使得逸云科技能够置于一个专业现代化的企业氛围当中，
+                并且完整的配套设施可以使我们的员工能够专心投入在技术研发领域。
+            </p>
+
+            <div class="map">
+                <iframe src="<?php echo get_template_directory_uri().'/'; ?>qqmap.html"></iframe>
+            </div>
+
+        </div>
+
+        <div class="info-pano clearfix">
+            <h1>
+                <span class="dashicons dashicons-admin-site"></span>
+                公司环境
+            </h1>
+            <div class="pano">
+                <iframe src="<?php echo get_template_directory_uri().'/'; ?>pano/PANO_20150310_121638.html"></iframe>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<?php include "footer.php";

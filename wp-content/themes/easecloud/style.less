@@ -30,7 +30,7 @@ Text Domain: easecloud
 html {}
 
 body {
-  font-size: 14px;
+  min-width: @body-width; position: relative; font-size: 14px;
   .font-black();
 }
 
@@ -55,9 +55,15 @@ body {
 }
 
 #colophon {
-  .wrapper(); .font-normal();
-  font-size: 12px; text-align: center; margin: 30px auto 15px auto;
-  padding-top: 8px; border-top: 1px solid @color-border;
+
+  margin: 30px 0 0 0; background: #F5F5F5;
+  border-top: 1px solid #E0E0E0;
+
+  .site-info {
+    font-size: 12px; text-align: center;
+    padding: 15px 0;
+    .font-normal(); .wrapper();
+  }
   .footer-logo-miit { width: 1em; height: 1em; display: inline-block; vertical-align: middle; }
   p { line-height: 1.8em; }
   a {
@@ -110,6 +116,96 @@ body {
   }
 }
 
+
+body.page-about{
+
+  .banner {
+    margin: 0 auto; position: relative; height: 350px;
+    background: url(images/about-ban-photo.png) 50% 50% no-repeat #F5E6D1;
+    .banner-title{
+      position: relative;
+      h1{
+        font-size: 62px; color: #FFFFFF; text-align: center;padding-top: 180px;
+        height: 170px; text-shadow: 0 0 8px darken(#C18759, 20%);
+      }
+    }
+  }
+
+  .about-us{
+    .clearfix(); margin-top: 30px;
+    h1 {
+      font-size: 20px; line-height: 28px; width: 50%; border-bottom: 1px solid @color-border;
+      padding-bottom: 8px; margin: 0 0 15px 0;
+      @-webkit-keyframes rotation {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+      }
+      .dashicons {
+        font-size: 30px; float: left; height: 28px; width: 28px; text-align: center;
+        color: @color-minor; margin-right: 8px;
+      }
+      &:hover .dashicons {
+        .animation(rotation 0.8s);
+      }
+    }
+
+    h2 { color: @color-minor; font-size: 18px; margin: 15px 0; }
+
+    h3 { color: @color-minor; font-size: 16px; margin: 10px 0 6px 0; }
+
+    p { font-size: 15px; text-indent: 2em; line-height: 24px; }
+
+    a {
+      font-weight: bold; color: @color-link;
+      &:hover { color: @color-link-hover; }
+      &:visited { color: @color-link-visited; }
+    }
+
+    .info-summary {
+      width: 450px; padding-left: 10px; float: left;
+      .summary{ margin: 0 50px 0 0; }
+      .contact {
+        margin: 30px 0;
+        li{
+          .font-normal(); line-height: 24px; margin: 8px 0;
+          .dashicons, .fa {
+            display: block; float: left; color: #ffffff; background: @color-major;
+            width: 22px; height: 22px; .circle();
+            line-height: 22px; text-align: center; margin-right: 8px;
+          }
+          .fa { font-size: 13px; }
+          .dashicons { font-size: 14px; }
+        }
+      }
+    }
+
+    .info-address {
+      margin-left: 460px; padding-right: 10px;
+      .map{
+        margin-top: 30px;
+        iframe{
+          box-sizing: border-box; padding: 10px;
+          width: 100%; height: 350px; border: 1px solid @color-border;
+        }
+      }
+    }
+
+    .info-pano {
+      padding: 25px; margin: 30px 10px;
+      padding-top: 20px; background: #F5F5F5;
+      h1 {
+        border-bottom: none; width: auto;
+      }
+      iframe {
+        box-sizing: border-box; width: 100%; border: 1px solid @color-border;
+        padding: 8px; height: 480px; background: white;
+      }
+    }
+
+  }
+}
+
+
 // WordPress Support classes
 // TODO: Not Implemented Style Classes
 .wp-caption { position: relative; }
@@ -123,69 +219,3 @@ body {
 .aligncenter { text-align: center; }
 
 .wrapper { width: 1000px; margin: 0 auto; .clearfix(); }
-
-body.page-about{
-
-  min-width: 1000px; position: relative;
-
-  .ban{
-    margin: 0 auto;position: relative;
-    background: url(images/about-ban-photo.png) 50% 50% no-repeat #F5E6D1;
-    .ban-title{
-      position: relative;
-      h1{
-        font-size: 62px; color: #FFFFFF; text-align: center;padding-top: 180px;
-        height: 170px; text-shadow: 0 0 5px rgba(0,0,0,0.5);
-      }
-    }
-
-  }
-
-  .about-us{
-    .clearfix(); margin-top: 30px;
-    .company-info{
-      width:440px; float: left;
-
-      .info-title{
-        .clearfix();
-        width: 140px; padding-bottom: 10px; border-bottom: 1px solid #969696;
-        img{float: left;}
-        h1{font-size: 24px;}
-      }
-
-      .info{
-        width:375px; margin-top: 10px;
-        p{
-          span{color: #EE701A;}
-          font-size: 15px; line-height: 30px;
-        }
-      }
-
-      .contact-address{
-        margin-top: 40px;
-        li{
-          .clearfix(); margin-bottom: 18px;
-          img{ float: left; }
-          p{ font-size: 26px;line-height: 48px; padding-left: 110px;}
-        }
-      }
-
-    }
-
-    .company-address-info{
-      width: 560px; float: right;
-      .address{
-        .clearfix();
-        img{float: left;}
-        p{font-size: 14px; padding-top: 15px; padding-left: 40px; }
-      }
-      .map{
-        margin-top: 30px;
-        iframe{
-          width: 560px; height:430px; border: none;
-        }
-      }
-    }
-
-  }
-}

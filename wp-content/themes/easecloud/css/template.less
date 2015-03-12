@@ -59,7 +59,21 @@ input { font-size: inherit; color: inherit; }
   -o-transform: scale(@x, @y); 	/* Opera */
 }
 
-.box-shadow(@shadow:0 0 0.5em fade(@color-dark, 25%)) {
+.duration(@time) {
+  transition-duration: @time;
+  -moz-transition-duration: @time; /* Firefox 4 */
+  -webkit-transition-duration: @time; /* Safari 和 Chrome */
+  -o-transition-duration: @time; /* Opera */
+}
+
+.animation(@animation) {
+  animation: @animation;
+  -moz-animation: @animation;	/* Firefox */
+  -webkit-animation: @animation;	/* Safari 和 Chrome */
+  -o-animation: @animation;
+}
+
+.box-shadow(@shadow:0 0 0.5em rgba(0, 0, 0, 0.5)) {
   -moz-box-shadow: @shadow;
   -webkit-box-shadow: @shadow;
   box-shadow: @shadow;
