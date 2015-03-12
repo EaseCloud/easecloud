@@ -21,6 +21,16 @@ html {}
 
 body {}
 
+//color
+@color-yellow-1: #F7F7F7;
+@color-yellow-2: #E6B18F;
+@color-yellow-3: #E7A27B;
+@color-blue-1: #E5ECF6;
+@color-blue-2: #C2D7E8;
+@color-white: #ffffff;
+@color-black: #000000;
+
+
 // WordPress Support classes
 // TODO: Not Implemented Style Classes
 .wp-caption { position: relative; }
@@ -32,3 +42,84 @@ body {}
 .alignright { text-align: right; }
 .alignleft { text-align: left; }
 .aligncenter { text-align: center; }
+
+//pan
+
+.outer-wrapper {max-width: 1440px; margin-left: auto; margin-right: auto; .aligncenter; overflow: hidden;}
+.inner-wrapper {width: 1000px; margin-left: auto; margin-right: auto;}
+
+#page-index {
+  position: relative;
+  .header-pic {
+    background: @color-yellow-1; height: 480px; width: 100%; position: relative; overflow: hidden;
+    img { position: absolute;}
+    .yellow { top: 10px; left: 0; min-height: 529px; min-width: 1286px; }
+    .cloud { top: -10px; left: 15px; min-height: 446px; min-width: 1427px; }
+    .text { top: 100px; left: 260px; min-height: 141px; min-width: 312px; }
+    .device { top: 120px; left: 640px; min-height: 330px; min-width: 601px; }
+  }
+  .about-field {
+    margin-top: 55px;
+    .title { font-size: 25px; font-weight: bold; }
+    .corporation { font-size: 14px; color: @color-yellow-3; margin-top: 15px; margin-bottom: 20px; font-weight: bold; }
+    .text { font-size: 14px; line-height: 25px;margin-bottom: 40px; }
+    .btn { border: solid 3px @color-yellow-2; padding: 5px 20px; }
+  }
+  .business-field {
+    position: relative;
+    .out-round {
+      height: 100px; width: 100px; border: @color-blue-1 3px solid; position: absolute; border-radius:100px;
+      background: no-repeat center @color-white; top: -50px
+    }
+    .col-1 { background-image: url("images/index-business-pic-4.png"); left: 20%; }
+    .col-2 { background-image: url("images/index-business-pic-3.png"); left: 37%; }
+    .col-3 { background-image: url("images/index-business-pic-2.png"); right: 37%; }
+    .col-4 { background-image: url("images/index-business-pic-1.png"); right: 20%; }
+    .divider { border: solid 1px @color-blue-2; margin-top: 125px; margin-bottom: 100px; }
+  }
+  .works-field {
+    margin-top: 90px;
+    .title { font-size: 25px; font-weight: bold; }
+    .subtitle { font-size: 14px; margin-top: 15px; margin-bottom: 60px;}
+    .works {
+      li {
+        float: left; width: 220px; margin: 5px 15px;
+        .works-1 { background: url("images/index-works-pic-1.png") no-repeat;}
+        .works-2 { background: url("images/index-works-pic-3.png") no-repeat;}
+        .works-3 { background: url("images/index-works-pic-2.png") no-repeat;}
+        .works-4 { background: url("images/index-works-pic-4.png") no-repeat;}
+        .works-5 { background: url("images/index-works-pic-2.png") no-repeat;}
+        .works-6 { background: url("images/index-works-pic-1.png") no-repeat;}
+        .works-7 { background: url("images/index-works-pic-3.png") no-repeat;}
+        .works-8 { background: url("images/index-works-pic-4.png") no-repeat;}
+        .works-pic { margin-bottom: -10px; height: 115px; width: 219px;}
+        .works-text {
+          background: url("images/index-works-pic-q.png") no-repeat center top ; height: 116px; width: 220px; text-align: left;
+          .works-title { padding-top: 20px; padding-left: 5px; font-size: 14px; }
+          .works-detail { font-size: 12px; padding: 3px 8px; line-height: 15px; }
+        }
+      }
+    }
+    .btn { border: solid 3px @color-yellow-2; padding: 5px 20px; }
+  }
+  .info-field {
+    width: 1013px; margin-left: auto; margin-right: auto; margin-top: 80px;
+    .title-block {
+      li { float: left; width: 50%;}
+      .logo { float: left;}
+      p { float: left; margin-left: 10px; margin-top: 5px; font-size: 14px; font-weight: bold;  }
+      .go-btn { float: right; }
+      .right { .logo { margin-left: 40px; }}
+      .left { .go-btn { margin-right: 40px; }}
+    }
+    .info-block {
+      height: 558px; background: url("images/index-info-pic.png") no-repeat center;
+      li { width: 50%; height: 138px; float: left; text-align: left; }
+      .title { margin: 23px 0; font-weight: bold;  }
+      p { font-size: 13px; }
+      .right { .detail { margin-left: 40px; } .title { margin-left: 40px; }}
+      .left { .detail { margin-right: 40px; }}
+    }
+  }
+  .contacts-field { margin-top: 80px;}
+}
