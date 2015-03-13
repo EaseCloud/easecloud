@@ -19,18 +19,33 @@ Text Domain: easecloud
 
 // variables
 @body-width: 1000px;
+
+@color-white: #ffffff;
+@color-black: #000000;
+
 @color-major: #005095;
 @color-minor: #EA5B23;
+@color-text: #444444;
 @color-border: #DADADA;
 
 @color-link: lighten(@color-major, 10%);
 @color-link-hover: darken(@color-major, 10%);
 @color-link-visited: @color-major;
 
+
+//color
+@color-yellow-2: #E6B18F;
+@color-yellow-3: #E7A27B;
+@color-blue-1: #E5ECF6;
+@color-blue-2: #C2D7E8;
+
+.inner-wrapper {width: 1000px; margin-left: auto; margin-right: auto;}
+
+
 html {}
 
 body {
-  min-width: @body-width; position: relative; font-size: 14px;
+  min-width: @body-width; position: relative; font-size: 14px; color: @color-text;
   .font-black();
 }
 
@@ -82,7 +97,163 @@ body {
 }
 
 
-.page-development {
+body.home {
+
+  .banner {
+
+    background: #F7F7F7; height: 480px; position: relative;
+
+    #cloud-move {
+      from { background-position-x: 2500px; }
+      to { background-position-x: 0;  }
+    }
+    @-webkit-keyframes cloud-move { #cloud-move(); }
+    @-moz-keyframes cloud-move { #cloud-move(); }
+    @-ms-keyframes cloud-move { #cloud-move(); }
+    @-o-keyframes cloud-move { #cloud-move(); }
+    @keyframes cloud-move { #cloud-move(); }
+
+    .cloud {
+      position: absolute; top: 0; bottom: 0; left: 0; right: 0; opacity: 0.8;
+      background: url(images/index-banner-cloud.png) 0 -60px repeat-x;
+      .animation(cloud-move 40s infinite linear);
+    }
+    .stripe {
+      position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+      background: url(images/index-banner-stripe.png) 50% -100px no-repeat;
+    }
+    .devices {
+      position: absolute; top: 0; bottom: -200px; left: 0; right: 0;
+      background: url(images/index-banner-devices.png) 50% 0 no-repeat;
+    }
+
+    .wrapper {
+      position: relative;
+      .slogan-1, .slogan-2 { width: 240px; position: absolute; }
+
+      #slogan-1-move {
+        from { opacity: 0; }
+        to { margin-left: 50px; margin-top: 15px; opacity: 1; }
+      }
+      @-webkit-keyframes slogan-1-move { #slogan-1-move(); }
+      @-moz-keyframes slogan-1-move { #slogan-1-move(); }
+      @-ms-keyframes slogan-1-move { #slogan-1-move(); }
+      @-o-keyframes slogan-1-move { #slogan-1-move(); }
+      @keyframes slogan-1-move { #slogan-1-move(); }
+      .slogan-1 { left: 0; top: 100px; .animation(slogan-1-move 2s forwards); }
+
+      #slogan-2-move {
+        from { opacity: 0; }
+        to { margin-left: -50px; margin-top: -15px; opacity: 1; }
+      }
+      @-webkit-keyframes slogan-2-move { #slogan-2-move(); }
+      @-moz-keyframes slogan-2-move { #slogan-2-move(); }
+      @-ms-keyframes slogan-2-move { #slogan-2-move(); }
+      @-o-keyframes slogan-2-move { #slogan-2-move(); }
+      @keyframes slogan-2-move { #slogan-2-move(); }
+      .slogan-2 { left: 195px; top: 197px; .animation(slogan-2-move 2s forwards); }
+
+      #cloud-icon-move {
+        from { opacity: 1; }
+        to { .rotate(720deg); opacity: 0; }
+      }
+      @-webkit-keyframes cloud-icon-move { #cloud-icon-move(); }
+      @-moz-keyframes cloud-icon-move { #cloud-icon-move(); }
+      @-ms-keyframes cloud-icon-move { #cloud-icon-move(); }
+      @-o-keyframes cloud-icon-move { #cloud-icon-move(); }
+      @keyframes cloud-icon-move { #cloud-icon-move(); }
+      .cloud-icon {
+        width: 32px; position: absolute; top: 150px; left: 200px;
+        .animation(cloud-icon-move 2s forwards);
+      }
+
+    }
+
+  }
+  section.index-about {
+    position: relative; .wrapper(); margin-top: 55px;
+    text-align: center; min-height: 480px; overflow: hidden;
+    h1 {
+      font-size: 24px; font-weight: bold; padding-bottom: 20px;
+      border-bottom: 1px solid @color-border; width: 380px; line-height: 32px;
+      margin: 30px auto 60px auto; position: relative;
+      .dashicons {
+        position: absolute; background: @color-white; color: #CCC;
+        left: 50%; bottom: 0; margin-left: -16px; margin-bottom: -16px;
+        font-size: 20px; text-align: center;
+        float: left; width: 32px; height: 32px; line-height: 32px; margin-right: 10px;
+      }
+    }
+    h2 { font-size: 18px; color: @color-minor; margin: 10px 0 15px 0; }
+    h3 { color: @color-minor; font-size: 16px; margin: 10px 0 6px 0; }
+
+    p { font-size: 15px; text-indent: 2em; line-height: 24px; }
+    .about-content { width: 540px; margin: 0 auto; }
+    img.logo-background {
+      z-index: -1px; position: absolute; right: -64px; bottom: -96px; opacity: 0.2;
+    }
+  }
+  .business-field {
+    position: relative;
+    .out-round {
+      height: 100px; width: 100px; border: @color-blue-1 3px solid; position: absolute; border-radius:100px;
+      background: no-repeat center @color-white; top: -50px
+    }
+    .col-1 { background-image: url("images/index-business-pic-4.png"); left: 20%; }
+    .col-2 { background-image: url("images/index-business-pic-3.png"); left: 37%; }
+    .col-3 { background-image: url("images/index-business-pic-2.png"); right: 37%; }
+    .col-4 { background-image: url("images/index-business-pic-1.png"); right: 20%; }
+    .divider { border: solid 1px @color-blue-2; margin-top: 125px; margin-bottom: 100px; }
+  }
+  .works-field {
+    margin-top: 90px;
+    .title { font-size: 25px; font-weight: bold; }
+    .subtitle { font-size: 14px; margin-top: 15px; margin-bottom: 60px;}
+    .works {
+      li {
+        float: left; width: 220px; margin: 5px 15px;
+        .works-1 { background: url("images/index-works-pic-1.png") no-repeat;}
+        .works-2 { background: url("images/index-works-pic-3.png") no-repeat;}
+        .works-3 { background: url("images/index-works-pic-2.png") no-repeat;}
+        .works-4 { background: url("images/index-works-pic-4.png") no-repeat;}
+        .works-5 { background: url("images/index-works-pic-2.png") no-repeat;}
+        .works-6 { background: url("images/index-works-pic-1.png") no-repeat;}
+        .works-7 { background: url("images/index-works-pic-3.png") no-repeat;}
+        .works-8 { background: url("images/index-works-pic-4.png") no-repeat;}
+        .works-pic { margin-bottom: -10px; height: 115px; width: 219px;}
+        .works-text {
+          background: url("images/index-works-pic-q.png") no-repeat center top ; height: 116px; width: 220px; text-align: left;
+          .works-title { padding-top: 20px; padding-left: 5px; font-size: 14px; }
+          .works-detail { font-size: 12px; padding: 3px 8px; line-height: 15px; }
+        }
+      }
+    }
+    .btn { border: solid 3px @color-yellow-2; padding: 5px 20px; }
+  }
+  .info-field {
+    width: 1013px; margin-left: auto; margin-right: auto; margin-top: 80px;
+    .title-block {
+      li { float: left; width: 50%;}
+      .logo { float: left;}
+      p { float: left; margin-left: 10px; margin-top: 5px; font-size: 14px; font-weight: bold;  }
+      .go-btn { float: right; }
+      .right { .logo { margin-left: 40px; }}
+      .left { .go-btn { margin-right: 40px; }}
+    }
+    .info-block {
+      height: 558px; background: url("images/index-info-pic.png") no-repeat center;
+      li { width: 50%; height: 138px; float: left; text-align: left; }
+      .title { margin: 23px 0; font-weight: bold;  }
+      p { font-size: 13px; }
+      .right { .detail { margin-left: 40px; } .title { margin-left: 40px; }}
+      .left { .detail { margin-right: 40px; }}
+    }
+  }
+  .contacts-field { margin-top: 80px;}
+}
+
+
+body.page-development {
   h2 {
     font-size: 20px; border-bottom: 1px solid @color-border;
     margin: 8px 0; padding: 8px 0;
@@ -120,12 +291,13 @@ body {
 body.page-about{
 
   .banner {
-    margin: 0 auto; position: relative; height: 350px;
+    margin: 0 auto; position: relative; height: 480px;
     background: url(images/about-ban-photo.png) 50% 50% no-repeat #F5E6D1;
+    .clearfix();
     .banner-title{
       position: relative;
       h1{
-        font-size: 62px; color: #FFFFFF; text-align: center;padding-top: 180px;
+        font-size: 62px; color: #FFFFFF; text-align: center; padding-top: 300px;
         height: 170px; text-shadow: 0 0 8px darken(#C18759, 20%);
       }
     }
@@ -136,10 +308,17 @@ body.page-about{
     h1 {
       font-size: 20px; line-height: 28px; width: 50%; border-bottom: 1px solid @color-border;
       padding-bottom: 8px; margin: 0 0 15px 0;
-      @-webkit-keyframes rotation {
+
+      #rotation {
         from { -webkit-transform: rotate(0deg); }
         to { -webkit-transform: rotate(360deg); }
       }
+      @-webkit-keyframes rotation { #rotation(); }
+      @-moz-keyframes rotation { #rotation(); }
+      @-ms-keyframes rotation { #rotation(); }
+      @-o-keyframes rotation { #rotation(); }
+      @keyframes rotation { #rotation(); }
+
       .dashicons {
         font-size: 30px; float: left; height: 28px; width: 28px; text-align: center;
         color: @color-minor; margin-right: 8px;
@@ -184,7 +363,7 @@ body.page-about{
       .map{
         margin-top: 30px;
         iframe{
-          box-sizing: border-box; padding: 10px;
+          box-sizing: border-box; padding: 8px;
           width: 100%; height: 350px; border: 1px solid @color-border;
         }
       }
@@ -201,7 +380,15 @@ body.page-about{
         padding: 8px; height: 480px; background: white;
       }
     }
+  }
 
+  #name-card-1, #name-card-2 {
+    position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.5);
+    display: none;
+    img {
+      position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;
+      .box-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+    }
   }
 }
 
