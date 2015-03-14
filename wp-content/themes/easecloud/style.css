@@ -330,3 +330,117 @@ input {
 #page-index .contacts-field {
   margin-top: 80px;
 }
+#page-website {
+  position: relative;
+}
+#page-website .field-title .background-mask {
+  height: 350px;
+  overflow: hidden;
+}
+#page-website .field-title .background-mask .background {
+  min-width: 1440px;
+}
+#page-website .field-title .device {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 70px;
+  min-width: 612px;
+  min-height: 412px;
+}
+#page-website .field-service {
+  margin-top: 130px;
+  text-align: left;
+  position: relative;
+}
+#page-website .field-service .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+#page-website .field-service .title .title-icon {
+  vertical-align: text-bottom;
+  margin-left: 10px;
+}
+#page-website .field-service .works {
+  width: 100%;
+  height: 230px;
+  position: relative;
+}
+#page-website .field-service .works li {
+  position: absolute;
+  top: 48px;
+}
+#page-website .field-service .works .sub-circle {
+  position: absolute;
+  top: -13px;
+  left: -18px;
+}
+#page-website .field-service .works .col-1 {
+  left: 5%;
+}
+#page-website .field-service .works .col-2 {
+  left: 25%;
+}
+#page-website .field-service .works .col-3 {
+  left: 45%;
+}
+#page-website .field-service .works .col-4 {
+  left: 65%;
+}
+#page-website .field-service .works .col-5 {
+  left: 85%;
+}
+#page-website .field-service .divider {
+  border: solid 1px #c2d7e8;
+  top: 125px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+#page-website .field-price {
+  text-align: left;
+  position: relative;
+}
+#page-website .field-price .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+#page-website .field-price .title .title-icon {
+  vertical-align: text-bottom;
+  margin-left: 10px;
+}
+#page-website .field-price .block-price {
+  background: url("images/index-price-background.png") no-repeat center;
+  min-height: 455px;
+  min-width: 1440px;
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 30px;
+}
+#page-website .field-price .block-price .price {
+  background: url("images/index-price-num.png") no-repeat center;
+  height: 470px;
+  width: 1005px;
+}
+#page-website .field-works-show {
+  text-align: left;
+  position: relative;
+  margin-top: 50px;
+}
+#page-website .field-works-show .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+#page-website .field-works-show .title .title-icon {
+  vertical-align: text-bottom;
+  margin-left: 10px;
+}
+#page-website .field-works-show .block-works-show {
+  text-align: center;
+}
+#page-website .field-works-show .block-works-show .works li {
+  float: left;
+  margin: 25px 50px;
+}
