@@ -367,30 +367,18 @@ input {
   width: 100%;
   height: 230px;
   position: relative;
+  top: 50px;
 }
 #page-website .field-service .works li {
-  position: absolute;
-  top: 48px;
+  float: left;
+  position: relative;
+  width: 20%;
+  text-align: center;
 }
 #page-website .field-service .works .sub-circle {
   position: absolute;
   top: -13px;
-  left: -18px;
-}
-#page-website .field-service .works .col-1 {
-  left: 5%;
-}
-#page-website .field-service .works .col-2 {
-  left: 25%;
-}
-#page-website .field-service .works .col-3 {
-  left: 45%;
-}
-#page-website .field-service .works .col-4 {
-  left: 65%;
-}
-#page-website .field-service .works .col-5 {
-  left: 85%;
+  left: 33px;
 }
 #page-website .field-service .divider {
   border: solid 1px #c2d7e8;
@@ -416,7 +404,6 @@ input {
   min-height: 455px;
   min-width: 1440px;
   margin-top: 40px;
-  text-align: center;
   padding-top: 30px;
 }
 #page-website .field-price .block-price .price {
@@ -442,5 +429,7 @@ input {
 }
 #page-website .field-works-show .block-works-show .works li {
   float: left;
-  margin: 25px 50px;
+  width: 33.3%;
+  margin-top: 40px;
+  text-align: center;
 }
