@@ -25,7 +25,7 @@ Text Domain: easecloud
 
 @color-major: #005095;
 @color-minor: #EA5B23;
-@color-text: #444444;
+@color-text: rgb(108, 109, 112);
 @color-border: #DADADA;
 
 @color-link: lighten(@color-major, 10%);
@@ -81,11 +81,11 @@ body {
   }
   .footer-logo-miit { width: 1em; height: 1em; display: inline-block; vertical-align: middle; }
   p { line-height: 1.8em; }
-  a {
-    color: @color-link;
-    &:hover { color: @color-link-hover; }
-    &:visited { color: @color-link-visited; }
-  }
+//  a {
+//    color: @color-link;
+//    &:hover { color: @color-link-hover; }
+//    &:visited { color: @color-link-visited; }
+//  }
 
   #menu-footer {
     .menu-item {
@@ -187,10 +187,10 @@ body.home {
     h2 { font-size: 18px; color: @color-minor; margin: 10px 0 15px 0; }
     h3 { color: @color-minor; font-size: 16px; margin: 10px 0 6px 0; }
 
-    p { font-size: 15px; text-indent: 2em; line-height: 24px; }
+    p { font-size: 14px; text-indent: 2em; line-height: 24px; }
     .about-content { width: 540px; margin: 0 auto; }
     img.logo-background {
-      z-index: -1px; position: absolute; right: -64px; bottom: -96px; opacity: 0.2;
+      z-index: -1; position: absolute; right: -64px; bottom: -96px; opacity: 0.2;
     }
   }
   .business-field {
@@ -332,12 +332,13 @@ body.page-about{
 
     h3 { color: @color-minor; font-size: 16px; margin: 10px 0 6px 0; }
 
-    p { font-size: 15px; text-indent: 2em; line-height: 24px; }
+    p { text-indent: 2em; line-height: 24px; }
 
     a {
-      font-weight: bold; color: @color-link;
-      &:hover { color: @color-link-hover; }
-      &:visited { color: @color-link-visited; }
+      font-weight: bold;
+//      color: @color-link;
+//      &:hover { color: @color-link-hover; }
+//      &:visited { color: @color-link-visited; }
     }
 
     .info-summary {
@@ -346,7 +347,8 @@ body.page-about{
       .contact {
         margin: 30px 0;
         li{
-          .font-normal(); line-height: 24px; margin: 8px 0;
+//          .font-normal();
+          line-height: 24px; margin: 8px 0;
           .dashicons, .fa {
             display: block; float: left; color: #ffffff; background: @color-major;
             width: 22px; height: 22px; .circle();

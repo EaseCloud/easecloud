@@ -92,7 +92,7 @@ body {
   min-width: 1000px;
   position: relative;
   font-size: 14px;
-  color: #444444;
+  color: #6c6d70;
   font-family: 'Helvetica Neue', 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', '华文细黑', STHeiti, '微软雅黑', 'Microsoft YaHei', SimHei, sans-serif;
 }
 .wrapper {
@@ -170,15 +170,6 @@ body {
 }
 #colophon p {
   line-height: 1.8em;
-}
-#colophon a {
-  color: #006bc8;
-}
-#colophon a:hover {
-  color: #003562;
-}
-#colophon a:visited {
-  color: #005095;
 }
 #colophon #menu-footer .menu-item {
   display: inline-block;
@@ -585,7 +576,7 @@ body.home section.index-about h3 {
   margin: 10px 0 6px 0;
 }
 body.home section.index-about p {
-  font-size: 15px;
+  font-size: 14px;
   text-indent: 2em;
   line-height: 24px;
 }
@@ -594,7 +585,7 @@ body.home section.index-about .about-content {
   margin: 0 auto;
 }
 body.home section.index-about img.logo-background {
-  z-index: -1px;
+  z-index: -1;
   position: absolute;
   right: -64px;
   bottom: -96px;
@@ -932,19 +923,11 @@ body.page-about .about-us h3 {
   margin: 10px 0 6px 0;
 }
 body.page-about .about-us p {
-  font-size: 15px;
   text-indent: 2em;
   line-height: 24px;
 }
 body.page-about .about-us a {
   font-weight: bold;
-  color: #006bc8;
-}
-body.page-about .about-us a:hover {
-  color: #003562;
-}
-body.page-about .about-us a:visited {
-  color: #005095;
 }
 body.page-about .about-us .info-summary {
   width: 450px;
@@ -958,7 +941,6 @@ body.page-about .about-us .info-summary .contact {
   margin: 30px 0;
 }
 body.page-about .about-us .info-summary .contact li {
-  font-family: '宋体', 'SimSun', Arial, sans-serif;
   line-height: 24px;
   margin: 8px 0;
 }
