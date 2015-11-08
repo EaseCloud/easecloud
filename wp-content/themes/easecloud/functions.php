@@ -217,7 +217,7 @@ add_filter("mce_buttons_3", "enable_more_buttons");
  * @return string
  */
 function replace_siteurl($val) {
-    return 'http://'.$_SERVER['HTTP_HOST'];
+    return isset($_SERVER['HTTP_HOST']) ? 'http://'.$_SERVER['HTTP_HOST'] : $val;
 }
 add_filter('option_siteurl', 'replace_siteurl');
 add_filter('option_home', 'replace_siteurl');
